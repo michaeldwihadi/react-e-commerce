@@ -8,6 +8,7 @@ export const modifyData = ({ resultData }) => {
     data.sliderImageDesc =
       "DONT COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.";
     data.sliderImageBg = "f5fafd";
+    data.quantity = 5;
 
     switch (data.id) {
       case 1:

@@ -4,6 +4,7 @@ import { getData } from "./services/getData";
 import Cart from "./pages/Cart";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
+import Loading from "./components/Loading";
 
 const App = () => {
   const [products, setProducts] = useState([]);
@@ -29,7 +30,10 @@ const App = () => {
     fetchData();
   }, []);
   return (
-    <>{!loading && products.length > 0 && <Home resultData={products} />}</>
+    <>
+      {loading && <Loading />}
+      {!loading && products.length > 0 && <Home resultData={products} />}
+    </>
   );
 };
 
